@@ -17,7 +17,7 @@ export default defineConfig({
 	],
 	files: [
 		{
-			include: ["packages/admin/src/locales/**/*.po"],
+			include: ["packages/admin/src/locales/en/messages.po"],
 			pattern: "packages/admin/src/locales/@lang/messages.po",
 			type: "dictionary",
 		},
