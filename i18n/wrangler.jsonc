@@ -4,4 +4,11 @@
 	"assets": {
 		"directory": "./dist",
 	},
+	"routes": [
+		{
+			"pattern": "i18n.emdashcms.com",
+			"zone_name": "emdashcms.com",
+			"custom_domain": true,
+		},
+	],
 }
