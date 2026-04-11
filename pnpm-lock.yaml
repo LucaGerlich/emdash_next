@@ -491,6 +491,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 24.10.13
+      wrangler:
+        specifier: 'catalog:'
+        version: 4.80.0(@cloudflare/workers-types@4.20260305.1)
 
   packages/admin:
     dependencies:

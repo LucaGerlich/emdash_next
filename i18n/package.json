@@ -7,6 +7,7 @@
 		"deploy": "node --run build && wrangler deploy"
 	},
 	"devDependencies": {
-		"@types/node": "catalog:"
+		"@types/node": "catalog:",
+		"wrangler": "catalog:"
 	}
 }
