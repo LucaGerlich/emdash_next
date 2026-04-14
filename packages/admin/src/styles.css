@@ -25,17 +25,22 @@
  */
 
 /**
- * Classic theme token overrides
- * Overrides kumo CSS custom properties with classic CMS admin values.
- * Applied via data-theme="classic" on <html> so portals inherit too.
+ * Palette system
+ *
+ * Each [data-theme] block overrides kumo CSS custom properties to define
+ * a visual palette. Palettes primarily vary the brand/accent color and
+ * sidebar chrome — surface grays stay neutral to keep things tasteful.
+ *
+ * Sidebar-specific overrides use the --emdash-sidebar-* namespace so
+ * the Sidebar component can pick them up without hardcoding colors.
  */
+
+/* ─── Classic ─── WordPress heritage: blue accent, charcoal sidebar */
 [data-theme="classic"] {
-	/* Primary brand blue */
 	--color-kumo-brand: #2271b1;
 	--color-kumo-brand-hover: #135e96;
 	--text-color-kumo-brand: #2271b1;
 
-	/* Surfaces */
 	--color-kumo-base: #ffffff;
 	--color-kumo-elevated: #f0f0f1;
 	--color-kumo-recessed: #dcdcde;
@@ -47,18 +52,15 @@
 	--color-kumo-contrast: #1d2327;
 	--color-kumo-interact: #c3c4c7;
 
-	/* Borders */
 	--color-kumo-line: #c3c4c7;
 	--color-kumo-ring: #2271b1;
 
-	/* Text hierarchy */
 	--text-color-kumo-default: #1d2327;
 	--text-color-kumo-strong: #50575e;
 	--text-color-kumo-subtle: #787c82;
 	--text-color-kumo-inactive: #a7aaad;
 	--text-color-kumo-link: #2271b1;
 
-	/* Semantic colors */
 	--color-kumo-info: #72aee6;
 	--color-kumo-info-tint: #e7f4fe;
 	--color-kumo-success: #00a32a;
@@ -70,6 +72,17 @@
 	--text-color-kumo-success: #00a32a;
 	--text-color-kumo-danger: #d63638;
 	--text-color-kumo-warning: #dba617;
+
+	--emdash-sidebar-bg: #1d2327;
+	--emdash-sidebar-brand: #2271b1;
+}
+
+/* ─── Modern ─── Kumo defaults with dark sidebar chrome.
+ * No token overrides — inherits Kumo's oklch neutrals
+ * and built-in dark mode. Only sets sidebar vars. */
+[data-theme="modern"] {
+	--emdash-sidebar-bg: oklch(18% 0 0);
+	--emdash-sidebar-brand: oklch(0.5772 0.2324 260);
 }
 
 /* Base styles */

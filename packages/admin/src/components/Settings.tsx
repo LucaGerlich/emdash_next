@@ -10,6 +10,7 @@ import {
 	Key,
 	Envelope,
 	CaretRight,
+	Palette,
 } from "@phosphor-icons/react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
@@ -18,6 +19,7 @@ import * as React from "react";
 import { fetchManifest } from "../lib/api";
 import { SUPPORTED_LOCALES } from "../locales/index.js";
 import { useLocale } from "../locales/useLocale.js";
+import { PalettePicker } from "./PalettePicker.js";
 
 interface SettingsLinkProps {
 	to: string;
@@ -115,6 +117,22 @@ export function Settings() {
 					title={t`Email`}
 					description={t`View email provider status and send test emails`}
 				/>
+			</div>
+
+			{/* Appearance */}
+			<div className="space-y-2">
+				<div className="p-4 rounded-lg border bg-kumo-base">
+					<div className="flex items-center gap-3 mb-3">
+						<div className="text-kumo-subtle">
+							<Palette className="h-5 w-5" />
+						</div>
+						<div>
+							<div className="font-medium">{t`Admin Color Scheme`}</div>
+							<div className="text-sm text-kumo-subtle">{t`Choose the look and feel of the admin interface`}</div>
+						</div>
+					</div>
+					<PalettePicker />
+				</div>
 			</div>
 
 			{/* Language */}

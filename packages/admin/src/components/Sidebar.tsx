@@ -266,16 +266,16 @@ export function SidebarNav({ manifest }: SidebarNavProps) {
 			<style
 				dangerouslySetInnerHTML={{
 					__html: `
-			/* Classic dark chrome — override kumo tokens within the sidebar */
+			/* Dark chrome — picks up palette sidebar vars from [data-theme] */
 			.emdash-sidebar {
-				--color-kumo-base: #1d2327;
+				--color-kumo-base: var(--emdash-sidebar-bg);
 				--color-kumo-tint: rgba(255,255,255,0.1);
 				--color-kumo-line: rgba(255,255,255,0.08);
-				--color-kumo-brand: #2271b1;
+				--color-kumo-brand: var(--emdash-sidebar-brand);
 				--text-color-kumo-default: #fff;
 				--text-color-kumo-subtle: rgba(255,255,255,0.7);
 				--text-color-kumo-strong: #fff;
-				background-color: #1d2327 !important;
+				background-color: var(--emdash-sidebar-bg) !important;
 				color: #fff !important;
 				border-color: rgba(255,255,255,0.08) !important;
 			}
